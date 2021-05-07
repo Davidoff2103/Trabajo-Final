@@ -29,9 +29,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // routes
-//app.use('/api/books', require('./routes/books'));
+app.use('/api/books', require('./routes/books'));
 app.use( '/api/logins', require( './routes/logins' ) );
-//app.use('/api/registers', require('./routes/registers'));
+app.use('/api/registers', require('./routes/registers'));
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));

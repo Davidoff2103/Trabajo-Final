@@ -1,49 +1,48 @@
-import BookService from './services/BookService';
-const bookService = new BookService();
+import RegisterService from './services/RegisterService';
+const registerService = new RegisterService();
 
 import { format } from 'timeago.js';
 
 class UI2 {
 
-  async renderBooks() {
-    const books = await bookService.getBooks();
-    const booksCardContainer = document.getElementById('books-cards');
-    booksCardContainer.innerHTML = '';
-    books.forEach((book) => {
+  async renderRegisters() {
+    const registers = await registerService.getRegisters();
+    const registersCardContainer = document.getElementById('registers-cards');
+    registersCardContainer.innerHTML = '';
+    registers.forEach((register) => {
       const div = document.createElement('div');
       div.className = 'animated fadeInRight';
       div.innerHTML = `
       <div class="card m-2">
         <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="${book.imagePath}" class="img-fluid" alt="">
-            </div>
             <div class="col-md-8">
                 <div class="card-block px-2">
-                    <h4 class="card-title">${book.title}</h4>
-                    <p class="card-text">${book.author}</p>
-                    <a href="#" class="btn btn-danger delete" _id="${book._id}">X</a>
+                    <h4 class="card-title">${register.name}</h4>
+                    <h4 class="card-title">${register.email}</h4>
+                    <h4 class="card-text">${register.password}</h4>
+                    <p class="card-title">${register.date_of_birth}</p>
+                    <a href="#" class="btn btn-danger delete" _id="${register._id}">X</a>
                 </div>
             </div>
         </div>
         <div class="card-footer w-100 text-muted">
-          ${format(book.created_at)}
+          ${format(register.created_at)}
         </div>
       </div>
       `;
-      booksCardContainer.appendChild(div);
+      registersCardContainer.appendChild(div);
     });
   }
 
-  async addANewBook(book) {
-    await bookService.postBook(book);
-    this.renderBooks();
-    this.clearBookForm();
+  async addANewRegister(register) {
+    await registerService.postLogin(register);
+    this.renderRegisters();
+    this.clearRegisterForm();
   }
 
-  clearBookForm() {
-    document.getElementById('book-form').reset();
-    document.getElementById('title').focus();
+  clearRegisterForm() {
+    document.getElementById('register-form').reset();
+    document.getElementById('name').focus();
   }
 
   renderMessage(message, colorMessage, secondsToRemove) {
@@ -55,17 +54,17 @@ class UI2 {
     div.appendChild(document.createTextNode(message));
     // Puting in the documnet
     const container = document.querySelector('.col-md-4');
-    const bookForm = document.querySelector('#book-form');
-    container.insertBefore(div, bookForm);
+    const registerForm = document.querySelector('#register-form');
+    container.insertBefore(div, registerForm);
     // Removing the div after some secconds
     setTimeout(() => {
       document.querySelector('.message').remove();
     }, secondsToRemove);
   }
 
-  async deleteBook(bookId) {
-    await bookService.deleteBook(bookId);
-    this.renderBooks();
+  async deleteRegister(registerId) {
+    await registerService.deleteRegister(registerId);
+    this.renderRegisters();
   }
 
 }
