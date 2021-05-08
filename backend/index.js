@@ -34,8 +34,6 @@ app.use( '/api/logins', require( './routes/logins' ) );
 app.use('/api/registers', require('./routes/registers'));
 
 // static files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static((__dirname, '/public')));
 
 
 
