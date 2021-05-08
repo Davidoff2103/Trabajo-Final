@@ -35,7 +35,7 @@ app.use('/api/registers', require('./routes/registers'));
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
-app.use( express.static( __dirname + '/public' ) );
+app.use( express.static( __dirname) );
 
 
 // start the server
