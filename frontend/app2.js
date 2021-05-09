@@ -4,7 +4,7 @@ import Register from './models/Register.js';
 import UI from './UI2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const ui = new UI2();
+  const ui = new UI();
   ui.renderRegisters();
 });
 
@@ -27,7 +27,7 @@ document.getElementById('register-form')
     // }
 
     // Instatiating the UI
-    const ui = new UI();
+    const ui = new UI3();
 
     // New Book Object
     const register = new Register(name, email, password, date_of_birth);
