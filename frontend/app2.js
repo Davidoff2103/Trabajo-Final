@@ -27,7 +27,7 @@ document.getElementById('register-form')
     // }
 
     // Instatiating the UI
-    const ui = new UI3();
+    const ui = new UI();
 
     // New Book Object
     const register = new Register(name, email, password, date_of_birth);
