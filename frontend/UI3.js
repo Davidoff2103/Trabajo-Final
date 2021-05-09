@@ -3,7 +3,7 @@ const bookService = new BookService();
 
 import { format } from 'timeago.js';
 
-class UI3 {
+class UI {
 
   async renderBooks() {
     const books = await bookService.getBooks();
@@ -70,4 +70,4 @@ class UI3 {
 
 }
 
-export default UI3;
+export default UI;

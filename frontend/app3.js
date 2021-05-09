@@ -1,26 +1,28 @@
 import "./styles/app.css";
 
-import Register from './models/Register.js';
+import Book from './models/Book.js';
 import UI from './UI3.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
-  ui.renderRegisters();
+  ui.renderBooks();
 });
 
 
-document.getElementById('register-form')
+document.getElementById('book-form')
   .addEventListener('submit', function(e) {
-    const name = document.getElementById( 'name' ).value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const date_of_birth = document.getElementById( 'date_of_birth' ).value;
 
-      const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-      formData.append( 'password', password );
-          formData.append('date_of_birth', date_of_birth);
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const isbn = document.getElementById('isbn').value;
+    
+    const image = document.getElementById('image').files;
+
+    const formData = new FormData();
+    formData.append('image', image[0]);
+    formData.append('title', title);
+    formData.append('author', author);
+    formData.append('isbn', isbn);
 
     // for(var pair of formData.entries()) {
     //   console.log(pair[0]+', '+pair[1]);
@@ -30,26 +32,30 @@ document.getElementById('register-form')
     const ui = new UI3();
 
     // New Book Object
-    const register = new Register(name, email, password, date_of_birth);
+    const book = new Book(title, author, isbn);
 
     // Validating User Input
-    if (name === '' || email === '' || password === '' || date_of_birth === '') {
+    if (title === '' || author === '' || isbn === '') {
       ui.renderMessage('Please fill all the fields', 'error', 3000);
     } else {
       // Pass the new book to the UI
-      ui.addANewRegister(formData);
-      ui.renderMessage('New Register Added Successfully', 'success', 2000);
+      ui.addANewBook(formData);
+      ui.renderMessage('New Book Added Successfully', 'success', 2000);
     }
 
     e.preventDefault();
   });
 
-document.getElementById('registers-cards')
+document.getElementById('books-cards')
   .addEventListener('click', e => {
     const ui = new UI3();
     if (e.target.classList.contains('delete')) {
-      ui.deleteRegister(e.target.getAttribute('_id'));
-      ui.renderMessage('Register Deleted Successfully', 'success', 3000);
+      ui.deleteBook(e.target.getAttribute('_id'));
+      ui.renderMessage('Book Deleted Successfully', 'success', 3000);
     }
     e.preventDefault();
   });
+
+
+
+

@@ -35,7 +35,7 @@ class UI2 {
   }
 
   async addANewRegister(register) {
-    await registerService.postLogin(register);
+    await registerService.postRegister(register);
     this.renderRegisters();
     this.clearRegisterForm();
   }
