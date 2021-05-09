@@ -24,7 +24,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './frontend/index.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
