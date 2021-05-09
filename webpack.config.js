@@ -24,7 +24,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      minify: {
+    filename: 'index2.html',
+    template: './frontend/index2.html',
+      chunks: [ 'main' ],
+          minify: {
         collapseWhitespace: true,
         removeComments: true,
         removeRedundantAttributes: true,
@@ -32,7 +35,20 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true
       }
-    }),
+  }),
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: './frontend/index2.html',
+    chunks: [ 'exampleEntry' ],
+          minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
+  }),
     new MiniCssExtractPlugin({
       filename: "css/bundle.css"
     })
