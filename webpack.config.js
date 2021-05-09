@@ -33,16 +33,6 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true
       }
-    }),new HtmlWebpackPlugin({
-      template: './frontend/index2.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true
-      }
     }),
     new MiniCssExtractPlugin({
       filename: "css/bundle.css"
