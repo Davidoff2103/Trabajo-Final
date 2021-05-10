@@ -48,7 +48,7 @@ document.getElementById('boletin-form')
 
 document.getElementById('boletines-cards')
   .addEventListener('click', e => {
-    const ui = new UI3();
+    const ui = new UI();
     if (e.target.classList.contains('delete')) {
       ui.deleteBoletin(e.target.getAttribute('_id'));
       ui.renderMessage('Boletin Deleted Successfully', 'success', 3000);

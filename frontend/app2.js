@@ -46,7 +46,7 @@ document.getElementById('register-form')
 
 document.getElementById('registers-cards')
   .addEventListener('click', e => {
-    const ui = new UI2();
+    const ui = new UI();
     if (e.target.classList.contains('delete')) {
       ui.deleteRegister(e.target.getAttribute('_id'));
       ui.renderMessage('Register Deleted Successfully', 'success', 3000);
