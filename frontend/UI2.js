@@ -18,8 +18,8 @@ class UI2 {
             <div class="col-md-8">
                 <div class="card-block px-2">
                     <h4 class="card-name">${register.name}</h4>
-                    <h4 class="card-email">${register.email}</h4>
-                    <h4 class="card-password">${register.password}</h4>
+                    <h5 class="card-email">${register.email}</h5>
+                    <h6 class="card-password">${register.password}</h6>
                     <p class="card-date_of_birth">${register.date_of_birth}</p>
                     <a href="#" class="btn btn-danger delete" _id="${register._id}">X</a>
                 </div>
