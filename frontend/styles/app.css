@@ -50,3 +50,10 @@ div.page-wrap.d-flex.flex-row.align-items-center {
   right: 0 !important;
   left: 0 !important;
 }
+
+input#name.form-control,
+input#email.form-control,
+input#alias.form-control,
+input#about.form-control {
+  margin-bottom: 1rem;
+}
