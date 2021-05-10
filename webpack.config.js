@@ -7,7 +7,8 @@ const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
   entry: {
     app: './frontend/app.js',
-    app2: './frontend/app2.js'
+    app2: './frontend/app2.js',
+    app3: './frontend/app3.js'
   },
   mode: 'development',
   output: {
@@ -29,7 +30,7 @@ module.exports = {
     new HtmlWebpackPlugin( {
       filename: 'index.html',
       template: './frontend/index.html',
-      chunks: []
+      chunks: ['app3']
       // minify: {
       //   collapseWhitespace: true,
       //   removeComments: true,
