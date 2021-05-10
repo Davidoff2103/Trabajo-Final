@@ -17,10 +17,10 @@ class UI3 {
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="card-block px-2">
-                    <h4 class="card-title">${boletin.name}</h4>
-                    <h4 class="card-title">${boletin.email}</h4>
-                    <h4 class="card-title">${boletin.alias}</h4>
-                    <h4 class="card-text">${boletin.about}</p>
+                    <h4 class="card-name">${boletin.name}</h4>
+                    <h4 class="card-email">${boletin.email}</h4>
+                    <h4 class="card-alias">${boletin.alias}</h4>
+                    <h4 class="card-about">${boletin.about}</p>
                     <a href="#" class="btn btn-danger delete" _id="${boletin._id}">X</a>
                 </div>
             </div>

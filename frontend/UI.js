@@ -17,8 +17,8 @@ class UI {
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="card-block px-2">
-                    <h4 class="card-title">${login.email}</h4>
-                    <h4 class="card-title">${login.password}</h4>
+                    <h4 class="card-email">${login.email}</h4>
+                    <h4 class="card-password">${login.password}</h4>
                     <a href="#" class="btn btn-danger delete" _id="${login._id}">X</a>
                 </div>
             </div>
