@@ -29,7 +29,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // routes
-app.use('/api/books', require('./routes/boletines'));
+app.use('/api/boletines', require('./routes/boletines'));
 app.use( '/api/logins', require( './routes/logins' ) );
 app.use('/api/registers', require('./routes/registers'));
 
