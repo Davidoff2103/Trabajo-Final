@@ -54,6 +54,8 @@ div.page-wrap.d-flex.flex-row.align-items-center {
 input#name.form-control,
 input#email.form-control,
 input#alias.form-control,
-input#about.form-control {
+input#about.form-control,
+input#password.form-control,
+input#date_of_birth.form-control {
   margin-bottom: 1rem;
 }
