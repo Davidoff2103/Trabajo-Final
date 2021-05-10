@@ -29,7 +29,7 @@ document.getElementById('boletin-form')
     // }
 
     // Instatiating the UI
-    const ui = new UI3();
+    const ui = new UI();
 
     // New Book Object
     const boletin = new Boletin(name, email, alias, about);
