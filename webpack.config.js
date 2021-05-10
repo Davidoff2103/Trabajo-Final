@@ -1,6 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require( 'path' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const MiniCssExtractPlugin = require( "mini-css-extract-plugin" );
 
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -12,25 +12,23 @@ module.exports = {
   },
   mode: 'development',
   output: {
-    path: path.join(__dirname, 'backend/public'),
+    path: path.join( __dirname, 'backend/public' ),
     filename: 'js/[name].js'
   },
-  module : {
-    rules: [
-      {
-        test: /\.css/,
-        use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
-      }
-    ]
+  module: {
+    rules: [ {
+      test: /\.css/,
+      use: [
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader'
+      ]
+    } ]
   },
   plugins: [
     new HtmlWebpackPlugin( {
       filename: 'index.html',
       template: './frontend/index.html',
-      chunks: ['app3']
+      chunks: [ 'app3' ]
       // minify: {
       //   collapseWhitespace: true,
       //   removeComments: true,
@@ -43,16 +41,16 @@ module.exports = {
     new HtmlWebpackPlugin( {
       filename: 'index2.html',
       template: './frontend/index2.html',
-      chunks: ['app']
+      chunks: [ 'app' ]
     } ),
     new HtmlWebpackPlugin( {
       filename: 'index3.html',
       template: './frontend/index3.html',
-      chunks: ['app2']
-    }),
-    new MiniCssExtractPlugin({
+      chunks: [ 'app2' ]
+    } ),
+    new MiniCssExtractPlugin( {
       filename: "css/bundle.css"
-    })
+    } )
   ],
   devtool: 'source-map'
 };
