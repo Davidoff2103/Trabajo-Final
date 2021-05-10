@@ -15,8 +15,12 @@ document.getElementById('register-form')
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const date_of_birth = document.getElementById( 'date_of_birth' ).value;
+    
+    const image = document.getElementById( 'image' ).files;
 
-      const formData = new FormData();
+    const formData = new FormData();
+        formData.append('image', image[0]);
+
     formData.append('name', name);
     formData.append('email', email);
       formData.append( 'password', password );

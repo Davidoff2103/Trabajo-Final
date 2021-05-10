@@ -15,6 +15,9 @@ class UI2 {
       div.innerHTML = `
       <div class="card m-2">
         <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="${register.imagePath}" class="img-fluid" alt="">
+            </div>
             <div class="col-md-8">
                 <div class="card-block px-2">
                     <h4 class="card-name">${register.name}</h4>

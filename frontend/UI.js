@@ -40,7 +40,7 @@ class UI {
 
   clearLoginForm() {
     document.getElementById('login-form').reset();
-    document.getElementById('name').focus();
+    //document.getElementById('name').focus();
   }
 
   renderMessage(message, colorMessage, secondsToRemove) {

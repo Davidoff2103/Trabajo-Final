@@ -5,6 +5,7 @@ const RegisterSchema = new Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     date_of_birth: { type: Date, required: true },
+    imagePath: { type: String, required: true },
     created_at: { type: Date, default: Date.now }
 });
 
