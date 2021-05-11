@@ -59,3 +59,8 @@ input#password.form-control,
 input#date_of_birth.form-control {
   margin-bottom: 1rem;
 }
+
+a.navbar-brand:hover {
+  color: #198754 !important;
+  font-size: 140% !important
+}
