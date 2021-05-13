@@ -23,8 +23,8 @@ document.getElementById('register-form')
 
     formData.append('name', name);
     formData.append('email', email);
-      formData.append( 'password', password );
-          formData.append('date_of_birth', date_of_birth);
+    formData.append( 'password', password );
+    formData.append('date_of_birth', date_of_birth);
 
     // for(var pair of formData.entries()) {
     //   console.log(pair[0]+', '+pair[1]);
@@ -38,11 +38,11 @@ document.getElementById('register-form')
 
     // Validating User Input
     if (name === '' || email === '' || password === '' || date_of_birth === '') {
-      ui.renderMessage('Please fill all the fields', 'error', 3000);
+      ui.renderMessage('Por favor, rellena todos los campos', 'error', 3000);
     } else {
       // Pass the new book to the UI
       ui.addANewRegister(formData);
-      ui.renderMessage('New Register Added Successfully', 'success', 2000);
+      ui.renderMessage('Te has registrado correctamente', 'success', 2000);
     }
 
     e.preventDefault();

@@ -31,11 +31,11 @@ document.getElementById('login-form')
 
     // Validating User Input
     if (email === '' || password === '') {
-      ui.renderMessage('Please fill all the fields', 'error', 3000);
+      ui.renderMessage('Por favor, rellena todos los campos', 'error', 3000);
     } else {
       // Pass the new book to the UI
       ui.addANewLogin(formData);
-      ui.renderMessage('New Login Added Successfully', 'success', 2000);
+      ui.renderMessage('Has iniciado sesión correctamente', 'success', 2000);
     }
 
     e.preventDefault();

@@ -36,11 +36,11 @@ document.getElementById('boletin-form')
 
     // Validating User Input
     if (name === '' || email === '' || alias === '' || about === '') {
-      ui.renderMessage('Please fill all the fields', 'error', 3000);
+      ui.renderMessage('Por favor, rellena todos los campos', 'error', 3000);
     } else {
       // Pass the new book to the UI
       ui.addANewBoletin(formData);
-      ui.renderMessage('New Boletin Added Successfully', 'success', 2000);
+      ui.renderMessage('Te has registrado en nuestro boletín correctamente', 'success', 2000);
     }
 
     e.preventDefault();
