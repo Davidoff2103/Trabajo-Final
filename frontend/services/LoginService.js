@@ -18,16 +18,16 @@ class LoginService {
         const data = await res.json();
     }
 
-    async deleteLogin(loginId) {
-        const res = await fetch(`${this.URI}/${loginId}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            method: 'Delete'
-        });
-        const data = await res.json();
-        console.log(data);
-    }
+    // async deleteLogin(loginId) {
+    //     const res = await fetch(`${this.URI}/${loginId}`, {
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         method: 'Delete'
+    //     });
+    //     const data = await res.json();
+    //     console.log(data);
+    // }
 
 }
 

@@ -5,36 +5,36 @@ import { format } from 'timeago.js';
 
 class UI {
 
-  async renderLogins() {
-    const logins = await loginService.getLogins();
-    const loginsCardContainer = document.getElementById('logins-cards');
-    loginsCardContainer.innerHTML = '';
-    logins.forEach((login) => {
-      const div = document.createElement('div');
-      div.className = 'animated fadeInRight';
-      div.innerHTML = `
-      <div class="card m-2">
-        <div class="row no-gutters">
-            <div class="col-md-8">
-                <div class="card-block px-2">
-                    <h4 class="card-email">${login.email}</h4>
-                    <h6 class="card-password">${login.password}</h6>
-                    <a href="#" class="btn btn-danger delete" _id="${login._id}">X</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer w-100 text-muted">
-          ${format(login.created_at)}
-        </div>
-      </div>
-      `;
-      loginsCardContainer.appendChild(div);
-    });
-  }
+  // async renderLogins() {
+  //   const logins = await loginService.getLogins();
+  //   const loginsCardContainer = document.getElementById('logins-cards');
+  //   loginsCardContainer.innerHTML = '';
+  //   logins.forEach((login) => {
+  //     const div = document.createElement('div');
+  //     div.className = 'animated fadeInRight';
+  //     div.innerHTML = `
+  //     <div class="card m-2">
+  //       <div class="row no-gutters">
+  //           <div class="col-md-8">
+  //               <div class="card-block px-2">
+  //                   <h4 class="card-email">${login.email}</h4>
+  //                   <h6 class="card-password">${login.password}</h6>
+  //                   <a href="#" class="btn btn-danger delete" _id="${login._id}">X</a>
+  //               </div>
+  //           </div>
+  //       </div>
+  //       <div class="card-footer w-100 text-muted">
+  //         ${format(login.created_at)}
+  //       </div>
+  //     </div>
+  //     `;
+  //     loginsCardContainer.appendChild(div);
+  //   });
+  // }
 
   async addANewLogin(login) {
     await loginService.postLogin(login);
-    this.renderLogins();
+    // this.renderLogins();
     this.clearLoginForm();
   }
 

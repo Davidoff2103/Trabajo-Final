@@ -41,14 +41,14 @@ document.getElementById('login-form')
     e.preventDefault();
   });
 
-document.getElementById('logins-cards')
-  .addEventListener('click', e => {
-    const ui = new UI();
-    if (e.target.classList.contains('delete')) {
-      ui.deleteLogin(e.target.getAttribute('_id'));
-      ui.renderMessage('Login Deleted Successfully', 'success', 3000);
-    }
-    e.preventDefault();
-  });
+// document.getElementById('logins-cards')
+//   .addEventListener('click', e => {
+//     const ui = new UI();
+//     if (e.target.classList.contains('delete')) {
+//       ui.deleteLogin(e.target.getAttribute('_id'));
+//       ui.renderMessage('Login Deleted Successfully', 'success', 3000);
+//     }
+//     e.preventDefault();
+//   });
 
 
