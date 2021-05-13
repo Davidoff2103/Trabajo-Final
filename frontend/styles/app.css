@@ -31,6 +31,10 @@ a.navbar-brand {
   margin-right: 3rem;
 }
 
+nav.navbar.navbar-dark.bg-dark a.navbar-brand {
+  font-size: 30px;
+}
+
 form.d-flex {
   position: absolute !important;
   right: 0 !important;
@@ -63,4 +67,41 @@ input#date_of_birth.form-control {
 nav.navbar.navbar-expand-lg.navbar-light.bg-light a.navbar-brand:hover {
   color: #198754 !important;
   font-size: 140% !important
+}
+
+img#mario {
+  height: auto;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 40vh;
+  margin-left: 50vw;
+}
+
+img#bowser {
+  display: block;
+  height: auto;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 15vh;
+  margin-left: 55vw;
+  z-index: 999999;
+}
+
+body#index2,
+body#index3 {
+  background: linear-gradient(to bottom, deepskyblue, lightblue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
