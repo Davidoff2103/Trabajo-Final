@@ -60,10 +60,10 @@ class UI {
     }, secondsToRemove);
   }
 
-  async deleteLogin(loginId) {
-    await loginService.deleteLogin(loginId);
-    this.renderLogins();
-  }
+  // async deleteLogin(loginId) {
+  //   await loginService.deleteLogin(loginId);
+  //   this.renderLogins();
+  // }
 
 }
 

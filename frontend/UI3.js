@@ -5,38 +5,38 @@ import { format } from 'timeago.js';
 
 class UI3 {
 
-  async renderBoletines() {
-    const boletines = await boletinService.getBoletines();
-    const boletinesCardContainer = document.getElementById('boletines-cards');
-    boletinesCardContainer.innerHTML = '';
-    boletines.forEach((boletin) => {
-      const div = document.createElement('div');
-      div.className = 'animated fadeInRight';
-      div.innerHTML = `
-      <div class="card m-2">
-        <div class="row no-gutters">
-            <div class="col-md-8">
-                <div class="card-block px-2">
-                    <h4 class="card-name">${boletin.name}</h4>
-                    <h5 class="card-email">${boletin.email}</h5>
-                    <h6 class="card-alias">${boletin.alias}</h6>
-                    <p class="card-about">${boletin.about}</p>
-                    <a href="#" class="btn btn-danger delete" _id="${boletin._id}">X</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer w-100 text-muted">
-          ${format(boletin.created_at)}
-        </div>
-      </div>
-      `;
-      boletinesCardContainer.appendChild(div);
-    });
-  }
+  // async renderBoletines() {
+  //   const boletines = await boletinService.getBoletines();
+  //   const boletinesCardContainer = document.getElementById('boletines-cards');
+  //   boletinesCardContainer.innerHTML = '';
+  //   boletines.forEach((boletin) => {
+  //     const div = document.createElement('div');
+  //     div.className = 'animated fadeInRight';
+  //     div.innerHTML = `
+  //     <div class="card m-2">
+  //       <div class="row no-gutters">
+  //           <div class="col-md-8">
+  //               <div class="card-block px-2">
+  //                   <h4 class="card-name">${boletin.name}</h4>
+  //                   <h5 class="card-email">${boletin.email}</h5>
+  //                   <h6 class="card-alias">${boletin.alias}</h6>
+  //                   <p class="card-about">${boletin.about}</p>
+  //                   <a href="#" class="btn btn-danger delete" _id="${boletin._id}">X</a>
+  //               </div>
+  //           </div>
+  //       </div>
+  //       <div class="card-footer w-100 text-muted">
+  //         ${format(boletin.created_at)}
+  //       </div>
+  //     </div>
+  //     `;
+  //     boletinesCardContainer.appendChild(div);
+  //   });
+  // }
 
   async addANewBoletin(boletin) {
     await boletinService.postBoletin(boletin);
-    this.renderBoletines();
+    // this.renderBoletines();
     this.clearBoletinForm();
   }
 
@@ -62,10 +62,10 @@ class UI3 {
     }, secondsToRemove);
   }
 
-  async deleteBoletin(boletinId) {
-    await boletinService.deleteBoletin(boletinId);
-    this.renderBoletines();
-  }
+  // async deleteBoletin(boletinId) {
+  //   await boletinService.deleteBoletin(boletinId);
+  //   this.renderBoletines();
+  // }
 
 }
 

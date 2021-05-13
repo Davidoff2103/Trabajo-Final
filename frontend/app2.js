@@ -48,12 +48,12 @@ document.getElementById('register-form')
     e.preventDefault();
   });
 
-document.getElementById('registers-cards')
-  .addEventListener('click', e => {
-    const ui = new UI();
-    if (e.target.classList.contains('delete')) {
-      ui.deleteRegister(e.target.getAttribute('_id'));
-      ui.renderMessage('Register Deleted Successfully', 'success', 3000);
-    }
-    e.preventDefault();
-  });
+// document.getElementById('registers-cards')
+//   .addEventListener('click', e => {
+//     const ui = new UI();
+//     if (e.target.classList.contains('delete')) {
+//       ui.deleteRegister(e.target.getAttribute('_id'));
+//       ui.renderMessage('Register Deleted Successfully', 'success', 3000);
+//     }
+//     e.preventDefault();
+//   });
