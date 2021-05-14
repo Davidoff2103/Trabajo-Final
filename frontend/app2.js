@@ -5,7 +5,7 @@ import UI from './UI2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
-  ui.renderRegisters();
+  // ui.renderRegisters();
 });
 
 
@@ -42,7 +42,8 @@ document.getElementById('register-form')
     } else {
       // Pass the new book to the UI
       ui.addANewRegister(formData);
-      ui.renderMessage('Te has registrado correctamente', 'success', 2000);
+      ui.renderMessage( 'Te has registrado correctamente', 'success', 2000 );
+      setTimeout( function () { window.location.href = "./index.html"; }, 2000 );
     }
 
     e.preventDefault();

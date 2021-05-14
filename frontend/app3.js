@@ -5,7 +5,7 @@ import UI from './UI3.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
-  ui.renderBoletines();
+  // ui.renderBoletines();
 });
 
 
