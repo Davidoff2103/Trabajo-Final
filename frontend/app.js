@@ -35,7 +35,8 @@ document.getElementById('login-form')
     } else {
       // Pass the new book to the UI
       ui.addANewLogin(formData);
-      ui.renderMessage('Has iniciado sesión correctamente', 'success', 2000);
+      ui.renderMessage( 'Has iniciado sesión correctamente', 'success', 2000 );
+      setTimeout( function () { window.location.href = "./index.html"; }, 2000 );
     }
 
     e.preventDefault();
