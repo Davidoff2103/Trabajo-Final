@@ -1,6 +1,5 @@
 .wrapper {
   height: 100vh;
-  overflow: hidden;
 }
 
 body {
@@ -22,6 +21,7 @@ h1 {
     black -2px -2px 2px,
     black 2px -2px 2px,
     black -2px 2px 2px;
+    padding-top: 0;
 }
 
 .main {

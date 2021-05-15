@@ -24,7 +24,7 @@ body {
 }
 
 nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-  height: 7vh !important;
+  height: 10vh !important;
 }
 
 a.navbar-brand {
@@ -113,7 +113,7 @@ footer {
   width: 100%;
   background-color: #212529;
   color: white;
-  height: 10%;
+  height: 13%;
   display: flex;
   align-items: center;
   justify-content: center;
