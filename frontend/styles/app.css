@@ -248,3 +248,17 @@ footer {
   background: #ff6600;
   color: white;
 }
+
+img.logo{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+a.logo{
+  height: 3%;
+  width: 3%;
+  margin-right: 3%;
+}
+.navbar .container{
+  justify-content: left !important;
+}
