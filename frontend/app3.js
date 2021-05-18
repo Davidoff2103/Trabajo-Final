@@ -16,7 +16,7 @@ document.getElementById('boletin-form')
     const email = document.getElementById('email').value;
     const alias = document.getElementById('alias').value;
     const about = document.getElementById('about').value;
-    const subscribir = document.getElementById('subscribir').value;
+    const subscribir = document.getElementById('subscribir').checked;
 
     const formData = new FormData();
     formData.append('name', name);
