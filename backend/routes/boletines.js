@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { name, email, alias, about, subscribir} = req.body;
+    const { name, email, alias, about, subscribir } = req.body;
     const newBoletin = new Boletin({name, email, alias, about, subscribir});
     console.log(newBoletin)
     await newBoletin.save();
