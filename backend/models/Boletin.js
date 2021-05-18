@@ -5,6 +5,7 @@ const BoletinSchema = new Schema({
     email: { type: String, required: true },
     alias: { type: String, required: true },
     about: { type: String, required: true },
+    subscribir: { type: Boolean, required: true },
     created_at: { type: Date, default: Date.now }
 });
 

@@ -16,12 +16,14 @@ document.getElementById('boletin-form')
     const email = document.getElementById('email').value;
     const alias = document.getElementById('alias').value;
     const about = document.getElementById('about').value;
+    const subscribir = document.getElementById('subscribir').value;
 
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append( 'alias', alias );
     formData.append('about', about);
+    formData.append('subscribir', subscribir);
 
 
     // for(var pair of formData.entries()) {
@@ -32,7 +34,7 @@ document.getElementById('boletin-form')
     const ui = new UI();
 
     // New Book Object
-    const boletin = new Boletin(name, email, alias, about);
+    const boletin = new Boletin(name, email, alias, about, subscribir);
 
     // Validating User Input
     if (name === '' || email === '' || alias === '' || about === '') {
