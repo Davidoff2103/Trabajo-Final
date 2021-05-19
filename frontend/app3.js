@@ -37,7 +37,8 @@ document.getElementById('boletin-form')
     } else {
       // Pass the new book to the UI
       ui.addANewBoletin(formData);
-      ui.renderMessage('Te has registrado en nuestro boletín correctamente', 'success', 2000);
+      ui.renderMessage( 'Te has registrado en nuestro boletín correctamente', 'success', 2000 );
+      setTimeout( function () { window.location.href = "./index.html"; }, 2000 );
     }
 
     e.preventDefault();
