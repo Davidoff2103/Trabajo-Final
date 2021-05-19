@@ -263,7 +263,7 @@ a.logo{
   justify-content: left !important;
 }
 
-div.col-md-4{
+div#formulario.col-md-4{
   margin-left: auto;
   margin-right: auto;
 }
