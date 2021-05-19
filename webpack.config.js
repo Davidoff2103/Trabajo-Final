@@ -28,25 +28,41 @@ module.exports = {
     new HtmlWebpackPlugin( {
       filename: 'index.html',
       template: './frontend/index.html',
-      chunks: [ 'app3' ]
-      // minify: {
-      //   collapseWhitespace: true,
-      //   removeComments: true,
-      //   removeRedundantAttributes: true,
-      //   removeScriptTypeAttributes: true,
-      //   removeStyleLinkTypeAttributes: true,
-      //   useShortDoctype: true
-      // }
+      chunks: [ 'app3' ],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     } ),
     new HtmlWebpackPlugin( {
       filename: 'index2.html',
       template: './frontend/index2.html',
-      chunks: [ 'app' ]
+      chunks: [ 'app' ],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     } ),
     new HtmlWebpackPlugin( {
       filename: 'index3.html',
       template: './frontend/index3.html',
-      chunks: [ 'app2' ]
+      chunks: [ 'app2' ],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     } ),
     new MiniCssExtractPlugin( {
       filename: "css/bundle.css"

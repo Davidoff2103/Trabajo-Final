@@ -25,11 +25,6 @@ document.getElementById('boletin-form')
     formData.append('about', about);
     formData.append('subscribir', subscribir);
 
-
-    // for(var pair of formData.entries()) {
-    //   console.log(pair[0]+', '+pair[1]);
-    // }
-
     // Instatiating the UI
     const ui = new UI();
 
@@ -47,16 +42,6 @@ document.getElementById('boletin-form')
 
     e.preventDefault();
   });
-
-// document.getElementById('boletines-cards')
-//   .addEventListener('click', e => {
-//     const ui = new UI();
-//     if (e.target.classList.contains('delete')) {
-//       ui.deleteBoletin(e.target.getAttribute('_id'));
-//       ui.renderMessage('Boletin Deleted Successfully', 'success', 3000);
-//     }
-//     e.preventDefault();
-//   });
 
 
 

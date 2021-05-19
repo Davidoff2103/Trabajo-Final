@@ -5,7 +5,6 @@ import UI from './UI2.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
-  // ui.renderRegisters();
 });
 
 
@@ -26,10 +25,6 @@ document.getElementById('register-form')
     formData.append( 'password', password );
     formData.append('date_of_birth', date_of_birth);
 
-    // for(var pair of formData.entries()) {
-    //   console.log(pair[0]+', '+pair[1]);
-    // }
-
     // Instatiating the UI
     const ui = new UI();
 
@@ -48,13 +43,3 @@ document.getElementById('register-form')
 
     e.preventDefault();
   });
-
-// document.getElementById('registers-cards')
-//   .addEventListener('click', e => {
-//     const ui = new UI();
-//     if (e.target.classList.contains('delete')) {
-//       ui.deleteRegister(e.target.getAttribute('_id'));
-//       ui.renderMessage('Register Deleted Successfully', 'success', 3000);
-//     }
-//     e.preventDefault();
-//   });

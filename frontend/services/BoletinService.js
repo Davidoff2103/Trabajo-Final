@@ -17,18 +17,6 @@ class BoletinService {
         });
         const data = await res.json();
     }
-
-    async deleteBoletin(boletinId) {
-        const res = await fetch(`${this.URI}/${boletinId}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            method: 'Delete'
-        });
-        const data = await res.json();
-        console.log(data);
-    }
-
 }
 
 export default BoletinService;

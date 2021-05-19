@@ -5,7 +5,6 @@ import UI from './UI.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
-  // ui.renderLogins();
 });
 
 
@@ -18,10 +17,6 @@ document.getElementById('login-form')
     const formData = new FormData();
     formData.append('email', email);
     formData.append('password', password);
-
-    // for(var pair of formData.entries()) {
-    //   console.log(pair[0]+', '+pair[1]);
-    // }
 
     // Instatiating the UI
     const ui = new UI();
@@ -41,15 +36,5 @@ document.getElementById('login-form')
 
     e.preventDefault();
   });
-
-// document.getElementById('logins-cards')
-//   .addEventListener('click', e => {
-//     const ui = new UI();
-//     if (e.target.classList.contains('delete')) {
-//       ui.deleteLogin(e.target.getAttribute('_id'));
-//       ui.renderMessage('Login Deleted Successfully', 'success', 3000);
-//     }
-//     e.preventDefault();
-//   });
 
 

@@ -17,18 +17,6 @@ class RegisterService {
         });
         const data = await res.json();
     }
-
-    async deleteRegister(registerId) {
-        const res = await fetch(`${this.URI}/${registerId}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            method: 'Delete'
-        });
-        const data = await res.json();
-        console.log(data);
-    }
-
 }
 
 export default RegisterService;
