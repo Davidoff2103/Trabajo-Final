@@ -42,7 +42,3 @@ document.getElementById('boletin-form')
 
     e.preventDefault();
   });
-
-
-
-

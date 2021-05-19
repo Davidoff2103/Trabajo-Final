@@ -1,8 +1,6 @@
 import BoletinService from './services/BoletinService';
 const boletinService = new BoletinService();
 
-import { format } from 'timeago.js';
-
 class UI3 {
   async addANewBoletin(boletin) {
     await boletinService.postBoletin(boletin);

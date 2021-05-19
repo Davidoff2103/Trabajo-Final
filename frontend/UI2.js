@@ -1,8 +1,6 @@
 import RegisterService from './services/RegisterService';
 const registerService = new RegisterService();
 
-import { format } from 'timeago.js';
-
 class UI2 {
   async addANewRegister(register) {
     await registerService.postRegister(register);

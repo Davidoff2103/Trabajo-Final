@@ -36,5 +36,3 @@ document.getElementById('login-form')
 
     e.preventDefault();
   });
-
-
