@@ -12,7 +12,8 @@ document.getElementById('register-form')
   .addEventListener('submit', function(e) {
     const name = document.getElementById( 'name' ).value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const password = document.getElementById( 'password' ).value;
+    const password2 = document.getElementById('password2').value;
     const date_of_birth = document.getElementById( 'date_of_birth' ).value;
     const image = document.getElementById( 'image' ).files;
 
@@ -21,6 +22,7 @@ document.getElementById('register-form')
     formData.append('name', name);
     formData.append('email', email);
     formData.append( 'password', password );
+    formData.append( 'password2', password2 );
     formData.append('date_of_birth', date_of_birth);
 
     // Instatiating the UI
@@ -30,8 +32,10 @@ document.getElementById('register-form')
     const register = new Register(name, email, password, date_of_birth);
 
     // Validating User Input
-    if (name === '' || email === '' || password === '' || date_of_birth === '') {
+    if (name === '' || email === '' || password === '' || password2 === '' || date_of_birth === '') {
       ui.renderMessage('Por favor, rellena todos los campos', 'error', 3000);
+    } else if ( password != password2 ) {
+      ui.renderMessage('Las contraseñas no coinciden', 'error', 3000);
     } else {
       // Pass the new book to the UI
       ui.addANewRegister(formData);

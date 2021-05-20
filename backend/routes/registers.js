@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { name, email, password, date_of_birth } = req.body;
+    const { name, email, password, password2, date_of_birth } = req.body;
     const imagePath = '/uploads/' + req.file.filename;
-    const newRegister = new Register({name, email, password, date_of_birth, imagePath});
+    const newRegister = new Register({name, email, password, password2, date_of_birth, imagePath});
     console.log(newRegister)
     await newRegister.save();
     res.json({'message': 'Register Saved'});
