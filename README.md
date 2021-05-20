@@ -4,7 +4,7 @@
 ### Además, la web incluye un footer (pie de página) estático con los enlaces a las principales redes sociales. En este caso aparece una página de "Coming soon", ya que es una característica que está en desarrollo.
 
 <p align="center">
-  <img width="100%" src="/frontend/imagenes/web.png">
+  <img width="90%" src="/frontend/imagenes/web.png">
 </p>
 
 #### Protecto realizado por David Blanco Bautista.
