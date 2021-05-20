@@ -60,6 +60,7 @@ input#email.form-control,
 input#alias.form-control,
 input#about.form-control,
 input#password.form-control,
+input#password2.form-control,
 input#date_of_birth.form-control {
   margin-bottom: 1rem;
 }
