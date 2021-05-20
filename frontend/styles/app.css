@@ -191,3 +191,30 @@ div#formulario.col-md-4{
   margin-left: auto;
   margin-right: auto;
 }
+body#fondoE{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+canvas#canvas{
+  height: 30vh;
+}
+body#fondoE{
+  background: #412f3b;
+}
+html#fondoE{
+  height: 100vh;
+}
+span.display-1.d-block{
+  color: white;
+}
+div.mb-4.lead{
+  color: white;
+  margin-bottom: 30vh !important;
+}
+a.btn.btn-link{
+  color: white;
+  margin-bottom: 10vh;
+  text-decoration: underline;
+}

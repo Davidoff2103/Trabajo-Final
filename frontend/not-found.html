@@ -15,14 +15,49 @@
   </head>
 
   <body>
+    <!DOCTYPE html>
+    <html lang="en" id="fondoE">
+
+      <head>
+        <meta charset="UTF-8">
+        <title>404 - Not Found</title>
+        <link rel="shortcut icon" type="image/png" href="./imagenes/favicon.png" />
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+          id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./styles/app.css">
+
+
+        </script>
+      </head>
+
+      <body id="fondoE">
+        <canvas id="canvas"></canvas>
+        <script src="https://unpkg.com/rive-js@0.7.6/dist/rive.min.js"></script>
+        <script>
+          // autoplays the first animation in the default artboard
+          new rive.Rive( {
+            src: 'https://public.rive.app/community/runtime-files/205-467-zombie-character.riv',
+            canvas: document.getElementById( 'canvas' ),
+            autoplay: true,
+            layout: new rive.Layout( {
+              fit: 'contain',
+              alignment: 'center'
+            } ),
+          } )
+        </script>
+      </body>
+
+    </html>
 
     <div class="page-wrap d-flex flex-row align-items-center">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
             <span class="display-1 d-block">404</span>
-            <div class="mb-4 lead">La página que estás buscando no se ha podido encontrar.</div>
-            <a href="./index.html" class="btn btn-link">Volver a la página principal</a>
+            <div class="mb-4 lead">La página que estás buscando no se ha encontrado.</div>
+            <a href="./index.html" class="btn btn-link">Vuelve a la página principal</a>
           </div>
         </div>
       </div>
